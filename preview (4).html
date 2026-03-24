@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ALES Website</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #fff7fa;
+}
+
+/* HEADER */
+header {
+  background: white;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  color: #b30059;
+}
+
+/* NAV */
+nav {
+  background: #b30059;
+  padding: 12px;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  margin: 15px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* SECTIONS */
+section {
+  display: none;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* CARD */
+.card {
+  background: white;
+  max-width: 800px;
+  margin: auto;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+/* BUTTON */
+button {
+  margin-top: 20px;
+  padding: 12px 30px;
+  border: none;
+  background: #b30059;
+  color: white;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+/* FOOTER */
+footer {
+  background: #b30059;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+  <div class="logo">ALES WEBSITE</div>
+</header>
+
+<nav>
+  <a onclick="shfaq('home')">Kreu</a>
+  <a onclick="shfaq('about')">Rreth Nesh</a>
+  <a onclick="shfaq('services')">Shërbimet</a>
+  <a onclick="shfaq('contact')">Kontakt</a>
+</nav>
+
+<!-- KREU -->
+<section id="home">
+  <div class="card">
+    <h2>Mirë se vini në ALES Website</h2>
+    <p>
+      Ne ofrojmë krijim website-sh moderne, të shpejta dhe të personalizuara
+      për biznese dhe individë që duan të rriten online.
+    </p>
+    <p>
+      Me një dizajn profesional dhe funksionalitet të lartë,
+      ju ndihmojmë të krijoni një prezencë të fortë në internet.
+    </p>
+    <button onclick="mesazh()">Kontakto tani</button>
+  </div>
+</section>
+
+<!-- RRETH NESH -->
+<section id="about">
+  <div class="card">
+    <h2>Rreth Nesh</h2>
+    <p>
+      ALES Website është një shërbim modern për krijimin e faqeve web profesionale.
+      Ne fokusohemi në ndërtimin e website-ve që jo vetëm duken bukur,
+      por edhe funksionojnë shpejt dhe janë të lehta për përdorim.
+    </p>
+    <p>
+      Qëllimi ynë është të ndihmojmë bizneset dhe individët të kenë
+      një identitet të fortë online dhe të arrijnë më shumë klientë.
+    </p>
+    <p>
+      Me përkushtim dhe kreativitet, ne sjellim ide në jetë përmes teknologjisë.
+    </p>
+  </div>
+</section>
+
+<!-- SHERBIMET -->
+<section id="services">
+  <div class="card">
+    <h2>Shërbimet</h2>
+    <p>• Krijim website bazik</p>
+    <p>• Website profesional për biznese</p>
+    <p>• Dizajn modern dhe responsive</p>
+    <p>• Përmirësim dhe mirëmbajtje website</p>
+  </div>
+</section>
+
+<!-- KONTAKT -->
+<section id="contact">
+  <div class="card">
+    <h2>Kontakt</h2>
+    <p>Instagram: @PROGRAMIME_FAST</p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 ALES Website</p>
+</footer>
+
+<script>
+function shfaq(id) {
+  let seksionet = document.querySelectorAll("section");
+  seksionet.forEach(sec => sec.style.display = "none");
+
+  document.getElementById(id).style.display = "block";
+}
+
+function mesazh() {
+  alert("Na kontaktoni për bashkëpunim profesional.");
+}
+
+shfaq('home');
+</script>
+
+</body>
+</html>
